@@ -1,0 +1,61 @@
+.blogspot-section .blog-posts {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    padding: 50px 0;
+    margin-bottom: 10px;
+}
+
+.blogspot-section .blog-post {
+    padding: 10px;
+    max-width: 350px;
+    border-radius: 10px;
+    border-bottom:2px solid #aaa;
+}
+
+.blogspot-section .blog-post h3 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+
+.blogspot-section .blog-post a {
+    font-size: 1.2rem;
+    color: crimson;
+    text-decoration: none;
+    font-weight: 600;
+}
+@media (max-width: 768px) {
+    .blogspot-section .blog-posts {
+        gap: 1rem;
+        padding: 0;
+    }
+    
+    .blogspot-section .blog-post {
+        padding: 30px;
+        border-radius: 8px;
+        max-width: 200px;
+        border-top:none;
+        padding: 20px;
+    }
+    
+    .blogspot-section .blog-post h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+    
+    
+    .blogspot-section .blog-post a {
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+    .blogspot-section .blog-post p{
+        font-size: 0.8rem;
+        margin: 0 0 16px;
+    }
+
+}

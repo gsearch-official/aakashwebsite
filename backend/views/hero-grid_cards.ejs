@@ -1,0 +1,23 @@
+<section class="hero-grid_cards">
+    <!-- <h1><%= title %></h1> -->
+    <div class="cards-container">
+        <div class="left">
+            <% articles.slice(0, 1).forEach(function(article) { %>
+                <a href="/content/<%= article.type%>/<%= article.id %>" class="card">
+                    <img src="<%= article.image %>" alt="<%= article.title %>">
+                    <div class="title"><%= article.title %></div>
+                    <p class="content"><%= article.content %></p>
+                </a>
+            <% }); %>
+        </div>
+        <div class="right">
+            <% articles.slice(1).forEach(function(article) { %>
+                <a href="/content/<%= article.type%>/<%= article.id %>" class="card">
+                    <img src="<%= article.image %>" alt="<%= article.title %>">
+                    <div class="title"><%= article.title %></div>
+                    <p class="content"><%= article.content %></p>
+                </a>
+            <% }); %>
+        </div>
+    </div>
+</section>

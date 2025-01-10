@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('header.ejs')%>
+<body>
+    <%- include('navbar.ejs') %>
+<section class="content-cards">
+    <h1><div class="title"><%= title %></div></h1>
+    <div class="cards-container">
+        <% articles.forEach(function(article) { %>
+            <div class="card">
+                <a href="/content/<%= article.type%>/<%= article.id %>">
+                <img src="<%= article.image %>" alt="<%= article.title %>"></a>
+                <div class="title"><%= article.title %></div>
+            </div>
+        <% }); %>
+    </div>
+</section>
+
+<!-- Pagination Section -->
+<div class="pagination-container">
+    <% if (pagination.currentPage > 1) { %>
+        <a href="?page=<%= pagination.currentPage - 1 %>&limit=<%= pagination.limit %>">Previous</a>
+    <% } %>
+
+    <% for (let i = 1; i <= pagination.totalPages + 1; i++) { %>
+        <a href="?page=<%= i %>&limit=<%= pagination.limit %>" 
+           class="<%= i === pagination.currentPage ? 'active' : '' %>">
+           <%= i %>
+        </a>
+    <% } %>
+
+    <% if (pagination.currentPage < pagination.totalPages + 1) { %>
+        <a href="?page=<%= pagination.currentPage + 1 %>&limit=<%= pagination.limit %>">Next</a>
+    <% } %>
+</div>
+
+
+
+<%- include('footer.ejs')%>
+</body>
+</html>

@@ -1,0 +1,75 @@
+.magazines-container h1{
+    color: crimson;
+    border: none;
+}
+
+.magazines-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    padding: 40px;
+    margin-top: 20px;
+}
+
+.magazines-container .left {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.magazines-container .left p {
+    font-size: 1.2rem;
+    color: #fff;
+   
+    font-weight: 400;
+}
+
+.magazines-container .left button {
+    padding: 0.25rem 0.7rem;
+    background-color: crimson;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.magazines-container .left button:hover{
+    background-color: crimson;
+    padding-bottom: 0.1rem;
+    border-bottom: lightcoral 0.15rem solid;
+}
+
+.magazines-container .right {
+    width: 49%;
+    background-color: inherit;
+
+}
+
+.magazines-container .image-slider{
+    margin-bottom: 10px;
+}
+
+.magazines-container .image-slider img {
+    width: 80%;
+    margin: auto;
+}
+
+
+@media (max-width: 768px) {
+
+    .magazines-container .right {
+        width: 100%;
+    }
+
+    .magazines-container .left p {
+        margin-bottom: 1rem;
+    }
+
+    .magazines-container .left {
+        width: 100%;
+    }
+}

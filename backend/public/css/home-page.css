@@ -1,0 +1,34 @@
+.split-section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+
+.split-section .left-split {
+    width: 75%;
+}
+
+.split-section .right-split {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    border-left: 1px solid #ccc;
+    padding: 0 10px;
+}
+
+@media (max-width: 1140px) {
+
+    .split-section {
+        width: 100%;
+    }
+
+    .split-section .left-split {
+        width: 100%;
+    }
+
+    .split-section .right-split {
+        border-left: none;
+        width: 100%;
+    }
+}

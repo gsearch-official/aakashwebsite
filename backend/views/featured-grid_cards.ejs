@@ -1,0 +1,12 @@
+<section class="featured-grid_cards">
+    <h1><%= title %></h1>
+    <div class="cards-container">
+        <% articles.forEach(function(article) { %>
+                <a class="card" href="/content/<%= article.type%>/<%= article.id %>">
+                <img src="<%= article.image %>" alt="<%= article.title %>">
+                <div class="title"><%= article.title %></div>
+                <div class="content"><%- article.content %></div>
+                </a>
+        <% }); %>
+    </div>
+</section>

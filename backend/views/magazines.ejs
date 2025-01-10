@@ -1,0 +1,16 @@
+<section class="magazines-container">
+    <div class="left">
+       <h1>Latest Magazine</h1>
+       <p>Don't Miss And Stay Up-to-date</p>
+       <button>View All Magazines</button>
+    </div>
+    <div class="image-slider right">
+        <% articles.forEach(function(magazine) { %>
+        <a class="card" href="/magazines/<%= magazine.id %>">
+                <img src="<%= magazine.image %>" alt="<%= magazine.title %>">
+                <div class="title"><%= magazine.title %></div>
+        </a>
+        <% }); %>
+    </div>
+</section>
+

@@ -1,0 +1,14 @@
+<section class="leaders-container">
+    <h1>Featured Leaders</h1>
+    <div class="leaders-wrapper autoplay">
+      <% leaders.forEach(function(leader) { %>
+      <div class="leader">
+        <div class="card">
+          <img src="<%= leader.image %>" class="leader-img" alt="Leader Image">
+          <div class="card-body">
+            <p class="leader-text"><%= leader.title %><br><%= leader.tags %></p>
+          </div>
+        </div>
+      </div>
+      <% }); %>
+  </section>

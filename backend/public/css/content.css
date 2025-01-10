@@ -1,0 +1,100 @@
+.content-page {
+    padding: 3vw;
+    font-family: 'Georgia', serif ; 
+    color: #444; 
+    min-height: 100vh;
+}
+
+.content-page h1 { 
+    font-size: clamp( 15px, 2.5vw, 38px);
+    font-weight: 700; 
+    color: #e63946; 
+    line-height: 1.3;  
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+}
+
+.content-page h2{
+    font-size: 2vw;
+    font-size: clamp( 10px, 2vw, 26px);
+
+}
+
+
+
+.content-page .content-content img {
+    float: right; 
+    margin-left: 100px;
+    margin-bottom: 40px;
+    height: clamp(200px, 20vw, 400px);
+    width: auto;
+}
+
+.content-page .content-content p {
+    font-size: clamp( 15px, 1.5vw, 20px);
+    line-height: 1.7; 
+    color: #444; 
+    margin-bottom: 3vw;
+    letter-spacing: 0.5px; 
+}
+
+.content-page .content-content ul{
+    padding: 0;
+}
+
+.content-page .content-content ul li {
+    font-size: clamp( 8px, 1.5vw, 16px);
+    padding-left: 3em; 
+    margin-bottom: 0.5rem;
+    list-style-position: inside; 
+    line-height: 1.5; 
+}  
+
+.content-tags{
+    margin-bottom:  clamp( 1rem, 8vw, 4rem);
+}
+
+.content-tags a {
+    color: crimson;
+    font-weight: 600;
+    padding: 5px 10px;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 3px;
+    border: 2px solid lightcoral;
+    cursor: pointer;
+}
+
+
+.content-tags a:hover{
+    background-color: crimson;
+    color: white;
+}
+
+@media (max-width: 768px) {
+
+    .content-page .content-title{
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    .content-page .content-content{
+        margin: auto;
+    }
+
+    .content-page .content-content img {
+        float: none; 
+        margin:auto;
+        margin-bottom: 40px;
+    }  
+
+    .content-tags a{
+        font-size: 0.7rem;
+        padding: 2px 4px;
+        margin-bottom: 5px !important;
+    }
+
+    .content-tags{
+        margin-bottom: 8px;
+    }
+
+}

@@ -1,0 +1,154 @@
+.navbar {
+    background-color: black;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: #aaa solid 3px;
+}
+
+
+
+.navbar .logo a img{
+  height: 40px;
+}
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar li a:hover{
+    text-decoration: underline 1px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.navbar li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    list-style: none;
+    padding: 5px 0;
+}
+
+
+.navbar li:hover ul {
+    display: block;
+    z-index: 1000;
+}
+.navbar li ul li {
+    margin: 0;
+}
+.navbar li ul a {
+    white-space: nowrap;
+    color: black;
+}
+
+.navbar li ul a:hover {
+    color: crimson;
+}
+.search-container {
+    display: flex;
+    margin: 10px 0;
+}
+
+
+
+.search-container input[type="text"] {
+    border: none;
+    font-size: 14px;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #aaa;
+    padding: 0 5px;
+}
+
+
+select {
+    text-align: right;
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 14px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+select option {
+    background-color: black;
+    color: white;
+}
+
+select:focus{
+    text-align: left;
+}
+
+
+.navbar .down-arrow {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid white; 
+    display: inline-block;
+    vertical-align: middle;
+    color: white; 
+    margin: 0 3px;
+  }
+
+
+
+.search-container button {
+    padding: 0 2px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.search-container button:hover{
+    color: lightcoral;
+}
+
+
+@media (max-width: 768px) {
+    .navbar ul{
+        justify-content: center;
+    }
+    .navbar ul li{
+        font-size: 14px;
+        display: inline-block;
+        padding: 0 4px;
+    }
+    .navbar .logo a img {
+        height: 25px;
+    }
+
+}

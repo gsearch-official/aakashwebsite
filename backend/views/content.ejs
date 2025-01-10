@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('header.ejs')%>
+<body>
+    <%- include('navbar.ejs',  { search : '' }) %>
+<div class="container">
+    <div class="content-page">
+        <h1 class="content-title"><%- content.title %></h1>
+        <div class="content-tags">
+              <% content.tags.forEach(function(tag) { %>
+                <a href="/content?type=<%= type %>&tag=<%= tag %>" ><%= tag %></a>
+              <% }); %>
+        </div>
+          
+        <div class="content-content">
+            <img src="<%= content.image %>" alt="<%= content.title %>">
+            
+            <%- content.content %>
+        </div>
+    </div>
+</div>
+    <%- include('footer.ejs')%>
+</body>
+</html>

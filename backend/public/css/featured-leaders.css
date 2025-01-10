@@ -1,0 +1,44 @@
+.leaders-container{
+  margin-top: 30px;
+  padding: 10px 0;
+  background-color: black;
+}
+
+.leaders-container h1{
+  color: white;
+  border: none;
+  margin-left: 30px;
+}
+
+.leaders-wrapper{
+  width: 80%;
+  margin: auto;
+  padding: 14px 48px;
+}
+
+.leaders-wrapper .leader img {
+  width: 100%;
+  margin: auto;
+  border-radius: 4px;
+}
+
+.leaders-wrapper .leader {
+  font-size: 12px;
+  padding: 0 20px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .leaders-container h1{
+    padding: 0 10px 10px;
+  }
+
+
+  .leaders-wrapper .leader {
+    padding: 0 10px;
+  }
+
+  .leaders-wrapper{
+    padding: 0;
+  }
+}

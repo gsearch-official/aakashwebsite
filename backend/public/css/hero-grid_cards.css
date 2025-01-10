@@ -1,0 +1,181 @@
+.hero-grid_cards .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    border-bottom: #ccc solid 1px;
+    padding-bottom: 10px;
+
+}
+
+.hero-grid_cards .cards-container .left {
+    width: 70%;
+}
+
+.hero-grid_cards .cards-container .left .card {
+    width: 100%;
+    margin-top: 10px;
+
+}
+
+.hero-grid_cards .cards-container .left .card .title {
+    font-size: 1.7vw;
+}
+
+
+.hero-grid_cards .cards-container .left .card .content{
+
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+
+
+}
+
+.hero-grid_cards .cards-container .right {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+
+.hero-grid_cards .cards-container .right .card{
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.hero-grid_cards .cards-container .right .card:last-child{
+    border: none;
+}
+
+
+
+.hero-grid_cards .cards-container .right .card .title{
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.1rem;
+    
+}
+
+
+.hero-grid_cards .card {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: auto;
+
+}
+
+.hero-grid_cards .cards-container .right .card .content{
+
+    display: none;
+
+
+}
+
+
+.hero-grid_cards .card img {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.hero-grid_cards .card img:hover {
+    cursor: pointer;
+}
+
+.hero-grid_cards .card .title {
+    margin: 4px 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.hero-grid_cards .card .content {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.hero-grid_cards .button-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+
+.hero-grid_cards .button-container button {
+    margin-top: 10px;
+
+}
+
+@media (max-width: 768px) {
+
+    .hero-grid_cards,
+    .cards-container {
+        padding: 0 10px;
+    }
+
+    .hero-grid_cards .cards-container {
+        padding: 0 10px;
+    }
+    
+
+    .hero-grid_cards h1 {
+        padding-bottom: 10px;
+    }
+
+
+    .hero-grid_cards .cards-container .card {
+        justify-content: space-around;
+        text-align: left;
+        padding: 5px;
+        width: 80%;
+        margin: auto ;
+        margin-bottom: 30px;
+        border-radius: 4px;
+        border-bottom: 3px #eee solid;
+    }
+
+    .hero-grid_cards .cards-container .right {
+        width: 100%;
+    } 
+    
+    .hero-grid_cards .cards-container .right .card {
+        margin-bottom: 20px;
+    }
+
+    .hero-grid_cards .cards-container .right  .card .title {
+        font-size: 1rem;
+        font-weight: 500;
+    
+    }
+    
+    .hero-grid_cards .cards-container .right .card .content {
+        display: block;
+        font-size: 0.8rem;
+        font-weight: 200;
+        margin: 0;
+        color: #aaa;
+    }
+
+    .hero-grid_cards .cards-container .left  .card .title {
+        font-size: 1rem;
+        font-weight: 500;
+    
+    }
+    
+    .hero-grid_cards .cards-container .left .card .content {
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+        color: #aaa;
+    }
+
+    .hero-grid_cards .cards-container .left {
+        width: 100%;
+    }
+
+    .hero-grid_cards .cards-container .left .card {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+}

@@ -1,0 +1,123 @@
+<footer class="footer">
+  <div class="footer-container">
+    <!-- About Us Section -->
+    <div class="footer-about">
+      <img src="https://globalbusinessleadersmag.com/wp-content/uploads/2021/12/Global-Business-Leader-Mag.jpg" alt="">
+      <br><br>
+      <p>Business Leaders Magazine delivers insights and stories about the world’s most influential business leaders and
+        strategies shaping industries globally.</p>
+    </div>
+
+        <!-- Contact Us Section -->
+        <div class="footer-contact">
+          <h3>CONTACT US</h3>
+          <p><i class="bi bi-geo-alt-fill"></i> 1700 Northside Drive, Suite A7, Atlanta GA 30318 United States</p>
+          <p><i class="bi bi-telephone"></i> 014838388383</p>
+          <p><i class="bi bi-envelope"></i> Magnificentkomalkumari@gmail.com</p>
+          
+        </div>
+
+    <!-- Quick Links Section -->
+    <div class="footer-links">
+      <h3>NAVIGATION</h3>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/content?tag=Technology">Technology</a></li>
+        <li><a href="/content?type=Press">Press</a></li>
+        <li><a href="/content?type=Solution">Solution</a></li>
+
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media Section -->
+    <div class="footer-social">
+      <h3>MAGAZINES</h3>
+      <div class="social-icons">
+        <a href="#"><img
+            src="/images/Innovative-companies-web.jpg"
+            alt="Magazine 1"></a>
+        <a href="#"><img src="/images/Innovative-companies-web.jpg"
+            alt="Magazine 2"></a>
+        <a href="#"><img src="/images/Innovative-companies-web.jpg"
+            alt="Magazine 3"></a>
+          
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom Section -->
+  <div class="footer-bottom">
+    <p>&copy; 2024 Business Leaders Magazine. All rights reserved.</p>
+  </div>
+
+  <script>
+    $('.autoplay').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplay: true,
+      dots: false,
+      arrows: true,
+      infinite: true,
+      autoplaySpeed: 2500,
+      responsive: [
+            {
+                breakpoint: 768, // Adjust for smaller screens
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 480, // Adjust for very small screens
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+  </script>
+  <script>
+    $('.image-slider').slick({
+        slidesToShow: 4, // Number of images to show at once
+        slidesToScroll: 1, // Number of images to scroll at a time
+        dots: true, // Enable dots for navigation
+        infinite: true, // Infinite loop scrolling
+        arrows: false, // Disable arrows (optional)
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [
+            {
+                breakpoint: 768, // Adjust for smaller screens
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 480, // Adjust for very small screens
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+</script>
+ 
+<script>
+
+  const selectSelect = document.getElementById('navSearch-Select');
+
+  selectSelect.addEventListener('focus', function() {
+    selectSelect.style.textAlign = 'left';
+  });
+
+  selectSelect.addEventListener('change', function() {
+    selectSelect.style.textAlign = 'right';
+    selectSelect.blur()
+  });
+  
+  selectSelect.addEventListener('blur', function() {
+    selectSelect.style.textAlign = 'right';
+  });
+  
+</script>
+</footer>

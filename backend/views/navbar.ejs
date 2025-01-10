@@ -1,0 +1,104 @@
+<nav class="navbar">
+    <div class="logo">
+        <a href="/">
+            <img src="https://globalbusinessleadersmag.com/wp-content/uploads/2021/12/Global-Business-Leader-Mag.jpg"
+                alt="Global business logo">
+        </a>
+    </div>
+    <ul class="nav-list">
+        <!-- Technology Dropdown -->
+        <li class="nav-item dropdown">
+            <a href="/content?tag=Technology">Technology</a>
+            <ul class="dropdown-content">
+                <li><a href="/content?tag=Artificial%20Intelligence">Artificial Intelligence</a></li>
+                <li><a href="/content?tag=Big%20Data">Big Data</a></li>
+                <li><a href="/content?tag=Cloud">Cloud</a></li>
+                <li><a href="/content?tag=Data%20Analytics">Data Analytics</a></li>
+                <li><a href="/content?tag=IoT">IoT</a></li>
+                <li><a href="/content?tag=IT%20Service%20Networking">IT Service Networking</a></li>
+                <li><a href="/content?tag=Robotics">Robotics</a></li>
+                <li><a href="/content?tag=Security">Security</a></li>
+                <li><a href="/content?tag=Storage">Storage</a></li>
+            </ul>
+        </li>
+
+        <!-- Industry Dropdown -->
+        <li class="nav-item dropdown">
+            <a href="#">Industry</a>
+            <ul class="dropdown-content">
+                <li><a href="/content?tag=Aerospace%20and%20Defence">Aerospace and Defence</a></li>
+                <li><a href="/content?tag=Banking%20and%20Finance">Banking and Finance</a></li>
+                <li><a href="/content?tag=Biomedical%20and%20Biotechnology">Biomedical and Biotechnology</a></li>
+                <li><a href="/content?tag=Construction">Construction</a></li>
+                <li><a href="/content?tag=Education">Education</a></li>
+                <li><a href="/content?tag=EV%20Industry">EV Industry</a></li>
+                <li><a href="/content?tag=Food%20and%20Beverage">Food & Beverage</a></li>
+                <li><a href="/content?tag=Healthcare">Healthcare</a></li>
+                <li><a href="/content?tag=Legal">Legal</a></li>
+                <li><a href="/content?tag=Manufacturing">Manufacturing</a></li>
+                <li><a href="/content?tag=Media%20and%20Entertainment">Media & Entertainment</a></li>
+                <li><a href="/content?tag=Metal%20and%20Mining">Metal & Mining</a></li>
+                <li><a href="/content?tag=Pharma">Pharma</a></li>
+                <li><a href="/content?tag=Real%20Estate">Real Estate</a></li>
+                <li><a href="/content?tag=Retail%20Telecom">Retail Telecom</a></li>
+                <li><a href="/content?tag=Tourism%20and%20Hospitality">Tourism and Hospitality</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item"><a href="#">Magazines</a></li>
+
+        <!-- Featured Dropdown -->
+        <li class="nav-item dropdown">
+            <a href="#">Featured</a>
+            <ul class="dropdown-content">
+                <li><a href="/content?type=Leader">Leaders</a></li>
+                <li><a href="/content?type=Press">Press Release</a></li>
+            </ul>
+        </li>
+
+        <!-- Solutions Dropdown -->
+        <li class="nav-item dropdown">
+            <a href="/content?type=Solution">Solutions</a>
+            <ul class="dropdown-content">
+                <li><a href="/content?type=Solution&tag=Backup">Backup</a></li>
+                <li><a href="/content?type=Solution&tag=Business%20Process%20Management">Business Process Management</a>
+                </li>
+                <li><a href="/content?type=Solution&tag=Cyber%20Security">Cyber Security</a></li>
+                <li><a href="/content?type=Solution&tag=Data%20Privacy%20and%20Security">Data Privacy and Security</a>
+                </li>
+                <li><a href="/content?type=Solution&tag=Disaster%20Recovery">Disaster Recovery</a></li>
+                <li><a href="/content?type=Solution&tag=Enterprise%20Risk%20Management">Enterprise Risk Management</a>
+                </li>
+                <li><a href="/content?type=Solution&tag=Gamification">Gamification</a></li>
+                <li><a href="/content?type=Solution&tag=Product%20Management">Product Management</a></li>
+                <li><a href="/content?type=Solution&tag=Risk%20Analytics">Risk Analytics</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item"><a href="#">About Us</a></li>
+    </ul>
+
+    <div class="search-container">
+        <select id="navSearch-Select" name="type">
+            <option value="News">News</option>
+            <option value="Blog">Blog</option>
+            <option value="Press">Press</option>
+            <option value="Leader">Leader</option>
+            <option value="Magazine">Magazine</option>
+            <option value="Solution">Solution</option>
+        </select>
+        <div class="drop-down-container">
+            <div class="down-arrow"></div>
+        </div>
+        <input type="text" id="searchInput" name="search" value="<%= search || '' %>">
+        <button onclick="searchAPI()"><i class="fa fa-search"></i></button>
+    </div>
+</nav>
+
+<script>
+    function searchAPI() {
+        const category = document.getElementById("navSearch-Select").value;
+        const query = document.getElementById("searchInput").value;
+        window.location.href = `/content?type=${encodeURIComponent(category)}&search=${encodeURIComponent(query)}`;
+    }
+</script>

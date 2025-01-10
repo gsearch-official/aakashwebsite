@@ -1,0 +1,135 @@
+.content-cards .cards-container {
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px;
+    gap: 1.7vw;
+    justify-content: space-between left;
+    box-sizing: border-box;
+    margin-top: 2vw;
+}
+
+.content-cards .card {
+    width: 22%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 2px 10px;
+    border-bottom: 2px #eee solid;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Image styling */
+.content-cards .card img {
+    transition: border 0.5s ease;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    width: 100%; /* Ensure the image fills the card width */
+    height: auto;
+}
+
+/* Title styling */
+.content-cards .card .title {
+    font-size: clamp( 10px, 1.5vw, 18px);
+    font-weight: 400;
+    line-height: 1.2rem;
+    color: #333;
+    word-spacing: 3px;
+}
+
+/* Content text styling */
+.content-cards .card .content {
+    font-size: 0.8rem;
+    line-height: 1rem;
+    margin-top: 6px;
+    color: #666;
+}
+
+/* Button container for future use if needed */
+.content-cards .button-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.content-cards .button-container button {
+    margin-top: 10px;
+}
+
+/* Pagination Container */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Pagination Links */
+.pagination-container a {
+    padding: 8px 15px;
+    margin: 0 5px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover Effect */
+.pagination-container a:hover {
+    background-color: lightcoral;
+    color: #fff;
+}
+
+/* Active Page Styling */
+.pagination-container a.active {
+    background-color: crimson;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Previous/Next Buttons */
+.pagination-container a:first-child, 
+.pagination-container a:last-child {
+    font-weight: bold;
+}
+
+/* Disabled Links (for first/last page) */
+.pagination-container a:disabled {
+    color: #ccc;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    cursor: not-allowed;
+}
+
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+    .content-cards,
+    .cards-container {
+        padding: 0;
+    }
+
+    .content-cards h1 {
+        padding: 10px;
+        
+    }
+
+    .content-cards .card {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    .content-cards .card .title {
+        font-size: 3vw;
+    }
+
+    .content-cards .card .content {
+        font-size: 2.8vw;
+    }
+}
