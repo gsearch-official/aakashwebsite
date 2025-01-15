@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "serverRun": " nodemon index.js",
-     "start": "node index.js"
+    "start": "node src/index.js"
   },
   "author": "",
   "license": "ISC",
