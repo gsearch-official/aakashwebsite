@@ -2,11 +2,15 @@
     <h1><%= title %></h1>
     <div class="cards-container">
         <% articles.forEach(function(article) { %>
-                <a class="card" href="/content/<%= article.type%>/<%= article.id %>">
-                <img src="<%= article.image %>" alt="<%= article.title %>">
+            <a class="card" href="/content/<%= article.type%>/<%= article.id %>">
+                <% if (article.imageBase64) { %>
+                    <img src="data:<%= article.imageMimeType %>;base64,<%= article.imageBase64 %>" alt="<%= article.title %>">
+                <% } else { %>
+                    <img src="/path/to/default/image.png" alt="<%= article.title %>">
+                <% } %>
                 <div class="title"><%= article.title %></div>
                 <div class="content"><%- article.content %></div>
-                </a>
+            </a>
         <% }); %>
     </div>
 </section>

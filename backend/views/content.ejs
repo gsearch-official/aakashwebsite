@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('header.ejs')%>
+    <%- include('header.ejs') %>
 <body>
-    <%- include('navbar.ejs',  { search : '' }) %>
+    <%- include('navbar.ejs', { search : '' }) %>
 <div class="container">
     <div class="content-page">
         <h1 class="content-title"><%- content.title %></h1>
         <div class="content-tags">
               <% content.tags.forEach(function(tag) { %>
-                <a href="/content?type=<%= type %>&tag=<%= tag %>" ><%= tag %></a>
+                <a style="margin-bottom: 10px ;" href="/content?type=<%= type %>&tag=<%= tag %>" ><%= tag %></a>
               <% }); %>
         </div>
           
         <div class="content-content">
-            <img src="<%= content.image %>" alt="<%= content.title %>">
+            <% if (content.imageBase64) { %>
+                <img src="data:<%= content.imageMimeType %>;base64,<%= content.imageBase64 %>" alt="<%= content.title %>">
+            <% } else { %>
+                <img src="/path/to/default/image.png" alt="<%= content.title %>">
+            <% } %>
             
             <%- content.content %>
         </div>
     </div>
 </div>
-    <%- include('footer.ejs')%>
+    <%- include('footer.ejs') %>
 </body>
 </html>

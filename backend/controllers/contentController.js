@@ -16,6 +16,7 @@ const getModelForType = (type) => {
 };
 
 const contentController = {
+  // Get content listing (with pagination and filtering)
   getContentPage: async (req, res) => {
     try {
       const { type, tag, page = 1, search } = req.query;
@@ -32,8 +33,15 @@ const contentController = {
       const totalItems = await model.countDocuments(query);
       const articles = await model.find(query).skip(skip).limit(limitNumber);
 
+      // Process articles and shorten content preview
       articles.forEach(article => {
         article.content = article.content.replace(/<\/?[^>]+(>|$)/g, "").substring(0, 75) + "...";
+
+        // If image exists, convert it to base64 for front-end rendering
+        if (article.image && article.image.data) {
+          article.imageBase64 = article.image.data.toString('base64');
+          article.imageMimeType = article.image.contentType;
+        }
       });
 
       const totalPages = Math.ceil(totalItems / limitNumber);
@@ -49,12 +57,20 @@ const contentController = {
     }
   },
 
+  // Get detailed content page
   getContentDetailPage: async (req, res) => {
     const { type, id } = req.params;
     const model = getModelForType(type);
 
     try {
       const content = await model.findById(id);
+
+      // If image exists, convert it to base64 for front-end rendering
+      if (content.image && content.image.data) {
+        content.imageBase64 = content.image.data.toString('base64');
+        content.imageMimeType = content.image.contentType;
+      }
+
       res.render('content', { content, type });
     } catch (err) {
       console.error('Error fetching content to show:', err);

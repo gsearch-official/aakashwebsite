@@ -6,35 +6,21 @@
     
     <div class="split-section">
         <div class="left-split">
-            <!-- Tech News -->
             <%- include('hero-grid_cards.ejs', { title: 'Tech News', articles: data.techNews }) %>
             
-            <!-- Health News -->
             <%- include('featured-grid_cards.ejs', { title: 'Health News', articles: data.healthNews }) %>
         </div>
         
         <div class="right-split">
-            <!-- Latest Blogs -->
             <%- include('latest-grid_cards.ejs', { title: 'Latest Blogs', articles: data.latestBlogs }) %>
             
-            <!-- Latest News -->
             <%- include('latest-grid_cards.ejs', { title: 'Latest News', articles: data.latestNews }) %>
         </div>
     </div>
-
-    <!-- Featured Leaders -->
     <%- include('featured-leaders.ejs', { leaders: data.leaders }) %>
-
-    <!-- Manufacturing News -->
     <%- include('featured-grid_cards.ejs', { title: 'Manufacturing News', articles: data.manufacturingNews }) %>
-
-    <!-- Featured Blogs -->
     <%- include('featured-grid_cards.ejs', { title: 'Featured Blogs', articles: data.featuredBlogs }) %>
-
-    <!-- Featured Press -->
     <%- include('featured-grid_cards.ejs', { title: 'Featured Press', articles: data.featuredPress }) %>
-
-    <!-- Solutions -->
     <%- include('featured-grid_cards.ejs', { title: 'Solutions', articles: data.solutions }) %>
     
     <%- include('magazines.ejs', {articles: data.magazines})%>

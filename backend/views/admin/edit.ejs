@@ -9,8 +9,7 @@
 
 <body>
     <div class="container p-4">
-        <h3>Edit <%= content.type %>
-        </h3>
+        <h3>Edit <%= content.type %> Content</h3>
         <form action="/admin/edit/<%= content.type %>/<%= content._id %>" method="POST" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
@@ -20,22 +19,30 @@
                 <label for="tags" class="form-label">Tags (comma separated)</label>
                 <input type="text" class="form-control" id="tags" name="tags" value="<%= content.tags.join(', ') %>">
             </div>
-                <div class="row">
-                    <div class="col-md-8">
-                        <label for="image" class="form-label">Update New Image</label>
-                        <input type="file" class="form-control mb-3" id="image" name="image">
-                        <label for="image" class="form-label">Featured</label>
-                        <div class="mb-4 form-check form-switch" style="margin-left: 20px;">
-                            <input name="featured" class="form-check-input fs-4 " type="checkbox" <% if (content.featured) { %>
-                            checked <% } %> >
-                        </div>
+            <div class="row">
+                <div class="col-md-8">
+
+                    <label for="image" class="form-label">Update New Image</label>
+                    <input type="file" class="form-control mb-3" id="image" name="image">
+                    <label for="image" class="form-label">Featured</label>
+                    <div class="mb-4 form-check form-switch" style="margin-left: 20px;">
+                        <input name="featured" class="form-check-input fs-4" type="checkbox" <% if (content.featured) {
+                            %>
+                        checked <% } %> >
                     </div>
-                    <div class="col-md-4 d-flex justify-content-center">
-                        <img src="<%= content.image %>" alt="<%= content.title %>" height="180px">
-                    </div>
+                </div>
+                <div class="col-md-4 d-flex justify-content-center">
+                    <% if (imageBase64) { %>
+                        <img src="data:<%= imageMimeType %>;base64,<%= imageBase64 %>" alt="<%= content.title %>"
+                            height="180px">
+                        <% } 
+                        else { %>
+                            <p>No image available</p>
+                        <% } %>
+                </div>
             </div>
             <div class="row mb-3">
-                <label for="content" class="form-label ">Content</label>
+                <label for="content" class="form-label">Content</label>
                 <textarea class="form-control" id="content" name="content" rows="5"
                     required><%= content.content %></textarea>
             </div>
