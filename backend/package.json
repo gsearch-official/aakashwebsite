@@ -4,7 +4,8 @@
   "description": "bolg and magzine website",
   "main": "index.js",
   "scripts": {
-    "serverRun": " nodemon index.js"
+    "serverRun": " nodemon index.js",
+    "start": "node src/index.js"
   },
   "author": "",
   "license": "ISC",
